@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Friday Prayer Registration',
-  description: 'Register for Friday prayers in your community',
+  title: 'Anmeldung zum Freitagsgebet',
+  description: 'Anmeldung zum Freitagsgebet der Deuschsprachigen Muslimgemeinschaft e.V.',
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body>
         {children}
       </body>

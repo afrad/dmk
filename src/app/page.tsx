@@ -274,7 +274,7 @@ export default function HomePage() {
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('de-DE', {
       weekday: 'long',
       month: 'long',
       day: 'numeric',
@@ -282,7 +282,7 @@ export default function HomePage() {
   };
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', {
+    return date.toLocaleTimeString('de-DE', {
       hour: '2-digit',
       minute: '2-digit'
     });
@@ -437,7 +437,7 @@ export default function HomePage() {
           {/* Social Links */}
           <div className="flex justify-center space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/dmkbs"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 text-blue-600 hover:text-blue-800 px-4 py-2 rounded-xl text-sm font-medium transition-all transform hover:scale-105 border border-blue-200 shadow-sm"

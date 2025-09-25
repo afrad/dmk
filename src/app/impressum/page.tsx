@@ -11,31 +11,21 @@ const impressumContent = {
     content: `
 **Angaben gemäß § 5 TMG**
 
-Musterverein e.V.
-Musterstraße 123
-12345 Musterstadt
+Deutschsprachiger Muslimkreis Braunschweig e.V.
+Reichsstraße 6a
+38100 braunschweig
 Deutschland
 
 **Vertreten durch:**
-Vorstand: Max Mustermann (1. Vorsitzender)
+Vorstand: Youssif Isamail (1. Vorsitzender)
 
 **Kontakt:**
-Telefon: +49 (0) 123 456789
-E-Mail: info@musterverein.de
+Telefon: +49 (0) 174 4442555
+E-Mail: info@dmk-bs.de
 
 **Registereintrag:**
 Eintragung im Vereinsregister.
-Registergericht: Amtsgericht Musterstadt
-Registernummer: VR 12345
-
-**Umsatzsteuer-ID:**
-Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-DE123456789
-
-**Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**
-Max Mustermann
-Musterstraße 123
-12345 Musterstadt
+Registergericht: Amtsgericht Braunschweig
 
 **Haftungsausschluss:**
 
@@ -60,60 +50,7 @@ Diese Cookies ermöglichen erweiterte Funktionalitäten und Personalisierung, wi
 Sie können Ihre Cookie-Einstellungen jederzeit ändern, indem Sie den lokalen Speicher Ihres Browsers löschen.
     `
   },
-  en: {
-    title: 'Legal Notice',
-    content: `
-**Legal Information**
 
-Sample Association e.V.
-Sample Street 123
-12345 Sample City
-Germany
-
-**Represented by:**
-Board: Max Sample (Chairman)
-
-**Contact:**
-Phone: +49 (0) 123 456789
-Email: info@sampleassociation.de
-
-**Registry Entry:**
-Entry in the Association Register.
-Registration Court: Local Court Sample City
-Registration Number: VR 12345
-
-**VAT ID:**
-VAT identification number according to § 27 a VAT law:
-DE123456789
-
-**Responsible for content according to § 55 para. 2 RStV:**
-Max Sample
-Sample Street 123
-12345 Sample City
-
-**Disclaimer:**
-
-**Liability for Content**
-As service providers, we are liable for own contents of these websites according to Sec. 7, para. 1 German Telemedia Act (TMG). However, according to Sec. 8 to 10 German Telemedia Act (TMG), service providers are not under obligation to monitor foreign information provided or stored.
-
-**Liability for Links**
-Our offer contains links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents.
-
-**Copyright**
-Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator.
-
-**Privacy and Cookies**
-This website uses cookies to enhance user experience. We use the following types of cookies:
-
-**Essential Cookies**
-These cookies are necessary for the proper functioning of the website and cannot be disabled. They store your language preferences and cookie consent.
-
-**Functional Cookies**
-These cookies enable enhanced functionality and personalization, such as storing your login credentials for prayer registration.
-
-You can change your cookie settings at any time by clearing your browser's local storage.
-    `
-  }
 };
 
 export default function ImpressumPage() {
@@ -123,7 +60,7 @@ export default function ImpressumPage() {
     setLanguage(getBrowserLanguage());
   }, []);
 
-  const content = impressumContent[language === 'de' ? 'de' : 'en'];
+  const content = impressumContent[language === 'en' ? 'de' : 'de'];
 
   return (
     <div className="min-h-screen bg-gray-50 py-12" dir={language === 'ar' ? 'rtl' : 'ltr'}>
