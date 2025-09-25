@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PrayerWithRegistrations, LocalStorageRegistration } from '@/types';
 import { getDeviceKey } from '@/lib/utils';
 import { QRCode } from '@/components/qr-code';
@@ -322,20 +323,59 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-4" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 max-w-sm w-full border border-white/20 overflow-hidden">
-        {/* Header with enhanced mosque icon */}
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-green-50 flex items-center justify-center p-4 relative overflow-hidden" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      {/* Islamic Pattern Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 w-32 h-32 border-4 border-emerald-300 rounded-full transform rotate-45"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border-4 border-teal-300 rounded-full transform rotate-12"></div>
+        <div className="absolute bottom-20 left-32 w-40 h-40 border-4 border-green-300 rounded-full transform -rotate-12"></div>
+        <div className="absolute bottom-40 right-16 w-28 h-28 border-4 border-emerald-300 rounded-full transform rotate-45"></div>
+      </div>
+
+      <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 max-w-md w-full border border-emerald-100/50 overflow-hidden">
+        {/* Islamic Decorative Border */}
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500"></div>
+        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500"></div>
+
+        {/* Header with DMK Logo and Islamic Design */}
         <div className="text-center mb-8">
+          {/* DMK Logo */}
           <div className="relative inline-block mb-6">
-            <div className="text-7xl mb-2 drop-shadow-lg">🕌</div>
-            <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-pulse shadow-lg"></div>
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <Image
+                src="/logo.jpg"
+                alt="DMK - Deutschsprachiger Muslimkreis Braunschweig"
+                fill
+                className="object-contain drop-shadow-lg rounded-lg"
+                priority
+              />
+              <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-pulse shadow-lg flex items-center justify-center">
+                <span className="text-white text-xs font-bold">✦</span>
+              </div>
+            </div>
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">{t('friday_prayer')}</h1>
-          <div className="bg-gradient-to-r from-gray-100 to-gray-50 rounded-xl p-4 shadow-inner">
-            <div className="text-gray-700 font-medium mb-1">
+
+          {/* Prayer Title with Islamic Styling */}
+          <div className="relative">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 bg-clip-text text-transparent mb-4">{t('friday_prayer')}</h1>
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent flex-1"></div>
+              <span className="mx-4 text-emerald-600 text-xl">☪</span>
+              <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-400 to-transparent flex-1"></div>
+            </div>
+          </div>
+
+          {/* Date and Time with Islamic Design */}
+          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-6 shadow-inner border border-emerald-200 relative">
+            <div className="absolute top-2 left-2 text-emerald-300 text-lg">✦</div>
+            <div className="absolute top-2 right-2 text-emerald-300 text-lg">✦</div>
+            <div className="absolute bottom-2 left-2 text-emerald-300 text-lg">✦</div>
+            <div className="absolute bottom-2 right-2 text-emerald-300 text-lg">✦</div>
+
+            <div className="text-emerald-800 font-medium mb-2 text-lg">
               {formatDate(nextPrayer.datetime)}
             </div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <div className="text-4xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">
               {formatTime(nextPrayer.datetime)}
             </div>
           </div>
@@ -355,10 +395,16 @@ export default function HomePage() {
 
         {isRegistered ? (
           <div className="text-center">
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200 shadow-sm mb-6">
-              <div className="text-6xl mb-3">✅</div>
-              <div className="text-green-700 font-bold text-xl">{t('you_are_registered')}</div>
-              <div className="text-green-600 text-sm mt-2">Registration confirmed</div>
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-200 shadow-sm mb-6 relative">
+              <div className="absolute top-1 left-1 text-emerald-300 text-sm">✦</div>
+              <div className="absolute top-1 right-1 text-emerald-300 text-sm">✦</div>
+              <div className="text-6xl mb-3">🕌</div>
+              <div className="text-emerald-700 font-bold text-xl">{t('you_are_registered')}</div>
+              <div className="text-emerald-600 text-sm mt-2 flex items-center justify-center gap-2">
+                <span>☪</span>
+                Registration confirmed
+                <span>☪</span>
+              </div>
             </div>
             <button
               onClick={() => {
@@ -372,11 +418,12 @@ export default function HomePage() {
                   });
                 }
               }}
-              className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-4 px-6 rounded-2xl transition-all transform hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-2xl transition-all transform hover:scale-105 text-lg shadow-lg hover:shadow-xl border border-emerald-500"
             >
               <span className="flex items-center justify-center gap-3">
                 <span className="text-xl">📱</span>
                 {t('view_qr_code')}
+                <span className="text-sm">☪</span>
               </span>
             </button>
           </div>
@@ -415,49 +462,57 @@ export default function HomePage() {
 
         {/* Footer Links */}
         <div className="mt-8 space-y-4">
-          {/* Language Selector */}
+          {/* Language Selector with Islamic Design */}
           <div className="flex justify-center">
-            <select
-              value={language}
-              onChange={(e) => {
-                const newLang = e.target.value as Language;
-                setLanguage(newLang);
-                setUserLanguage(newLang);
-                console.log('User changed language to:', newLang);
-              }}
-              className="text-sm border border-gray-300 rounded px-2 py-1"
-            >
-              <option value="en">English</option>
-              <option value="de">Deutsch</option>
-              <option value="fr">Français</option>
-              <option value="ar">العربية</option>
-            </select>
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-3 shadow-inner border border-emerald-200 relative">
+              <div className="absolute -top-1 -left-1 text-emerald-400 text-xs">✦</div>
+              <div className="absolute -top-1 -right-1 text-emerald-400 text-xs">✦</div>
+              <select
+                value={language}
+                onChange={(e) => {
+                  const newLang = e.target.value as Language;
+                  setLanguage(newLang);
+                  setUserLanguage(newLang);
+                  console.log('User changed language to:', newLang);
+                }}
+                className="text-sm bg-transparent border-none outline-none font-medium text-emerald-700 cursor-pointer"
+              >
+                <option value="en">🇬🇧 English</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ar">🇸🇦 العربية</option>
+              </select>
+            </div>
           </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-4">
+          {/* Social Links with Islamic Design */}
+          <div className="flex justify-center space-x-3">
             <a
-              href="https://facebook.com/dmkbs"
+              href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 text-blue-600 hover:text-blue-800 px-4 py-2 rounded-xl text-sm font-medium transition-all transform hover:scale-105 border border-blue-200 shadow-sm"
+              className="flex items-center gap-2 bg-gradient-to-r from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 text-emerald-600 hover:text-emerald-800 px-4 py-2 rounded-xl text-sm font-medium transition-all transform hover:scale-105 border border-emerald-200 shadow-sm relative"
             >
+              <div className="absolute -top-0.5 -left-0.5 text-emerald-400 text-xs">✦</div>
               <span className="text-base">📘</span>
               {t('facebook')}
             </a>
             <Link
               href="/impressum"
-              className="flex items-center gap-2 bg-gradient-to-r from-gray-50 to-slate-50 hover:from-gray-100 hover:to-slate-100 text-gray-600 hover:text-gray-800 px-4 py-2 rounded-xl text-sm font-medium transition-all transform hover:scale-105 border border-gray-200 shadow-sm"
+              className="flex items-center gap-2 bg-gradient-to-r from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 text-teal-600 hover:text-teal-800 px-4 py-2 rounded-xl text-sm font-medium transition-all transform hover:scale-105 border border-teal-200 shadow-sm relative"
             >
+              <div className="absolute -top-0.5 -right-0.5 text-teal-400 text-xs">✦</div>
               <span className="text-base">ℹ️</span>
               {t('impressum')}
             </Link>
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-blue-100/30 to-purple-100/30 rounded-full blur-xl pointer-events-none"></div>
-        <div className="absolute -top-2 -left-2 w-16 h-16 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full blur-xl pointer-events-none"></div>
+        {/* Islamic Decorative Elements */}
+        <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-emerald-100/30 to-teal-100/30 rounded-full blur-xl pointer-events-none"></div>
+        <div className="absolute -top-2 -left-2 w-16 h-16 bg-gradient-to-br from-teal-100/30 to-green-100/30 rounded-full blur-xl pointer-events-none"></div>
+        <div className="absolute top-1/2 -left-1 text-emerald-200/50 text-3xl transform -translate-y-1/2 -rotate-12 pointer-events-none">☪</div>
+        <div className="absolute top-1/4 -right-1 text-teal-200/50 text-2xl transform rotate-12 pointer-events-none">✦</div>
       </div>
 
       {/* Cookie Consent Popup */}
