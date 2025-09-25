@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "register": "Register",
+    "people": "People",
+    "companions": "Companions"
+  },
+  "prayer": {
+    "title": "Friday Prayer Registration",
+    "upcoming": "Upcoming Prayers",
+    "open": "Open",
+    "full": "Full",
+    "closed": "Closed",
+    "remaining": "{count} seats remaining",
+    "capacity": "Capacity: {count}",
+    "location": "Location",
+    "time": "Time",
+    "registered": "You are registered for this prayer",
+    "registration_window": "Registration opens Saturday at midnight"
+  },
+  "registration": {
+    "success": "Registration successful!",
+    "updated": "Registration updated successfully",
+    "cancelled": "Registration cancelled",
+    "qr_code": "Your QR Code",
+    "show_fullscreen": "Show full screen",
+    "edit_companions": "Edit companions",
+    "cancel_registration": "Cancel registration",
+    "confirm_cancel": "Are you sure you want to cancel your registration?",
+    "total_people": "Total people: {count}",
+    "add_companion": "Add companion",
+    "remove_companion": "Remove companion"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "prayers": "Prayers",
+    "create_prayer": "Create Prayer",
+    "edit_prayer": "Edit Prayer",
+    "prayer_details": "Prayer Details",
+    "registrations": "Registrations",
+    "export_csv": "Export CSV",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "total_registered": "Total registered: {count}",
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password"
+  },
+  "form": {
+    "title": "Title",
+    "datetime": "Date and Time",
+    "capacity": "Capacity",
+    "location": "Location",
+    "notes": "Notes",
+    "auto_activation": "Auto activation",
+    "manual_active": "Manually active"
+  }
+}

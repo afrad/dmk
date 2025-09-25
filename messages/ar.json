@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "back": "العودة",
+    "next": "التالي",
+    "register": "تسجيل",
+    "people": "الأشخاص",
+    "companions": "المرافقون"
+  },
+  "prayer": {
+    "title": "تسجيل صلاة الجمعة",
+    "upcoming": "الصلوات القادمة",
+    "open": "مفتوح",
+    "full": "مكتمل",
+    "closed": "مغلق",
+    "remaining": "{count} مقاعد متاحة",
+    "capacity": "السعة: {count}",
+    "location": "المكان",
+    "time": "الوقت",
+    "registered": "أنت مسجل لهذه الصلاة",
+    "registration_window": "يفتح التسجيل يوم السبت في منتصف الليل"
+  },
+  "registration": {
+    "success": "تم التسجيل بنجاح!",
+    "updated": "تم تحديث التسجيل بنجاح",
+    "cancelled": "تم إلغاء التسجيل",
+    "qr_code": "رمز الاستجابة السريعة",
+    "show_fullscreen": "عرض بملء الشاشة",
+    "edit_companions": "تعديل المرافقين",
+    "cancel_registration": "إلغاء التسجيل",
+    "confirm_cancel": "هل أنت متأكد من إلغاء تسجيلك؟",
+    "total_people": "إجمالي الأشخاص: {count}",
+    "add_companion": "إضافة مرافق",
+    "remove_companion": "إزالة مرافق"
+  },
+  "admin": {
+    "dashboard": "لوحة تحكم المشرف",
+    "prayers": "الصلوات",
+    "create_prayer": "إنشاء صلاة",
+    "edit_prayer": "تعديل الصلاة",
+    "prayer_details": "تفاصيل الصلاة",
+    "registrations": "التسجيلات",
+    "export_csv": "تصدير CSV",
+    "activate": "تفعيل",
+    "deactivate": "إلغاء التفعيل",
+    "total_registered": "إجمالي المسجلين: {count}",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور"
+  },
+  "form": {
+    "title": "العنوان",
+    "datetime": "التاريخ والوقت",
+    "capacity": "السعة",
+    "location": "المكان",
+    "notes": "ملاحظات",
+    "auto_activation": "التفعيل التلقائي",
+    "manual_active": "نشط يدوياً"
+  }
+}

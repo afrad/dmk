@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Prayer {
+  id              String   @id @default(uuid())
+  title           String
+  datetime        DateTime
+  capacity        Int
+  location        String?
+  notes           String?
+  active          Boolean  @default(false)
+  auto_activation Boolean  @default(true)
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  registrations Registration[]
+
+  @@map("prayers")
+}
+
+model Registration {
+  id               String            @id @default(uuid())
+  prayer_id        String
+  created_at       DateTime          @default(now())
+  updated_at       DateTime          @updatedAt
+  people           Int
+  status           RegistrationStatus @default(CONFIRMED)
+  device_key       String
+  lang             String
+  qr_payload_text  String
+
+  prayer Prayer @relation(fields: [prayer_id], references: [id])
+
+  @@unique([prayer_id, device_key], name: "unique_active_registration")
+  @@map("registrations")
+}
+
+model AdminUser {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  password_hash String
+  totp_secret   String?
+  created_at    DateTime @default(now())
+  active        Boolean  @default(true)
+
+  @@map("admin_users")
+}
+
+model Setting {
+  key         String @id
+  value_jsonb Json
+
+  @@map("settings")
+}
+
+enum RegistrationStatus {
+  CONFIRMED
+  CANCELED
+}

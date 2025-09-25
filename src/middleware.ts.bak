@@ -1,0 +1,51 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+// Supported locales
+const locales = ['en', 'de', 'fr', 'ar'];
+const defaultLocale = 'en';
+
+// Get locale from pathname
+function getLocale(pathname: string): string {
+  const segments = pathname.split('/');
+  const firstSegment = segments[1];
+
+  if (locales.includes(firstSegment)) {
+    return firstSegment;
+  }
+
+  return defaultLocale;
+}
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Skip API routes and static files
+  if (pathname.startsWith('/api') ||
+      pathname.includes('.') ||
+      pathname.startsWith('/_next')) {
+    return NextResponse.next();
+  }
+
+  // Check if pathname already has a locale
+  const currentLocale = getLocale(pathname);
+  const hasLocale = locales.includes(pathname.split('/')[1]);
+
+  // If no locale in pathname and not default locale, redirect
+  if (!hasLocale && pathname !== '/') {
+    const newUrl = new URL(`/${currentLocale}${pathname}`, request.url);
+    return NextResponse.redirect(newUrl);
+  }
+
+  // If default locale in pathname, redirect to clean path
+  if (hasLocale && currentLocale === defaultLocale) {
+    const cleanPath = pathname.replace(`/${defaultLocale}`, '') || '/';
+    const newUrl = new URL(cleanPath, request.url);
+    return NextResponse.redirect(newUrl);
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)', '/']
+};

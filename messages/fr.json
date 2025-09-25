@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "register": "S'inscrire",
+    "people": "Personnes",
+    "companions": "Accompagnateurs"
+  },
+  "prayer": {
+    "title": "Inscription à la Prière du Vendredi",
+    "upcoming": "Prières à Venir",
+    "open": "Ouvert",
+    "full": "Complet",
+    "closed": "Fermé",
+    "remaining": "{count} places disponibles",
+    "capacity": "Capacité : {count}",
+    "location": "Lieu",
+    "time": "Heure",
+    "registered": "Vous êtes inscrit pour cette prière",
+    "registration_window": "L'inscription ouvre le samedi à minuit"
+  },
+  "registration": {
+    "success": "Inscription réussie !",
+    "updated": "Inscription mise à jour avec succès",
+    "cancelled": "Inscription annulée",
+    "qr_code": "Votre Code QR",
+    "show_fullscreen": "Afficher en plein écran",
+    "edit_companions": "Modifier les accompagnateurs",
+    "cancel_registration": "Annuler l'inscription",
+    "confirm_cancel": "Êtes-vous sûr de vouloir annuler votre inscription ?",
+    "total_people": "Total des personnes : {count}",
+    "add_companion": "Ajouter un accompagnateur",
+    "remove_companion": "Supprimer un accompagnateur"
+  },
+  "admin": {
+    "dashboard": "Tableau de Bord Admin",
+    "prayers": "Prières",
+    "create_prayer": "Créer une Prière",
+    "edit_prayer": "Modifier la Prière",
+    "prayer_details": "Détails de la Prière",
+    "registrations": "Inscriptions",
+    "export_csv": "Exporter CSV",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "total_registered": "Total inscrit : {count}",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "email": "Email",
+    "password": "Mot de passe"
+  },
+  "form": {
+    "title": "Titre",
+    "datetime": "Date et Heure",
+    "capacity": "Capacité",
+    "location": "Lieu",
+    "notes": "Notes",
+    "auto_activation": "Activation automatique",
+    "manual_active": "Actif manuellement"
+  }
+}

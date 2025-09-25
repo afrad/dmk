@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "register": "Registrieren",
+    "people": "Personen",
+    "companions": "Begleiter"
+  },
+  "prayer": {
+    "title": "Freitagsgebet Anmeldung",
+    "upcoming": "Kommende Gebete",
+    "open": "Offen",
+    "full": "Voll",
+    "closed": "Geschlossen",
+    "remaining": "{count} Plätze verfügbar",
+    "capacity": "Kapazität: {count}",
+    "location": "Ort",
+    "time": "Zeit",
+    "registered": "Sie sind für dieses Gebet angemeldet",
+    "registration_window": "Anmeldung öffnet samstags um Mitternacht"
+  },
+  "registration": {
+    "success": "Anmeldung erfolgreich!",
+    "updated": "Anmeldung erfolgreich aktualisiert",
+    "cancelled": "Anmeldung storniert",
+    "qr_code": "Ihr QR-Code",
+    "show_fullscreen": "Vollbild anzeigen",
+    "edit_companions": "Begleiter bearbeiten",
+    "cancel_registration": "Anmeldung stornieren",
+    "confirm_cancel": "Sind Sie sicher, dass Sie Ihre Anmeldung stornieren möchten?",
+    "total_people": "Personen insgesamt: {count}",
+    "add_companion": "Begleiter hinzufügen",
+    "remove_companion": "Begleiter entfernen"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "prayers": "Gebete",
+    "create_prayer": "Gebet erstellen",
+    "edit_prayer": "Gebet bearbeiten",
+    "prayer_details": "Gebet Details",
+    "registrations": "Anmeldungen",
+    "export_csv": "CSV exportieren",
+    "activate": "Aktivieren",
+    "deactivate": "Deaktivieren",
+    "total_registered": "Angemeldet insgesamt: {count}",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort"
+  },
+  "form": {
+    "title": "Titel",
+    "datetime": "Datum und Zeit",
+    "capacity": "Kapazität",
+    "location": "Ort",
+    "notes": "Notizen",
+    "auto_activation": "Automatische Aktivierung",
+    "manual_active": "Manuell aktiv"
+  }
+}
