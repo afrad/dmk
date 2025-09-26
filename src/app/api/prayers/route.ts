@@ -12,7 +12,8 @@ export async function GET() {
       location: prayer.location,
       capacity: prayer.capacity,
       remaining: prayer.remaining,
-      status: prayer.status
+      status: prayer.status,
+      active: prayer.active
     }));
 
     return NextResponse.json(publicPrayers);

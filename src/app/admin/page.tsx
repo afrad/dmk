@@ -313,9 +313,7 @@ export default function AdminPage() {
             </button>
           </form>
 
-          <div className="mt-6 text-center text-sm text-gray-500">
-            <p>Default: admin@example.com / admin123</p>
-          </div>
+
         </div>
       </div>
     );

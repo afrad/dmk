@@ -44,8 +44,15 @@ export function isRegistrationOpen(prayer: PrayerWithRegistrations, now: Date): 
 }
 
 export function getPrayerStatus(prayer: PrayerWithRegistrations, now: Date): 'open' | 'full' | 'closed' {
+  // First check if prayer is manually disabled by admin
+  if (!prayer.active) return 'closed';
+
+  // Then check time-based registration window
   if (!isRegistrationOpen(prayer, now)) return 'closed';
+
+  // Finally check capacity
   if ((prayer.remaining || 0) <= 0) return 'full';
+
   return 'open';
 }
 

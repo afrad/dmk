@@ -7,7 +7,7 @@ async function main() {
   console.log('🌱 Starting seed...');
 
   // Create admin user
-  const hashedPassword = await bcrypt.hash('d200m300k', 12);
+  const hashedPassword = await bcrypt.hash('', 12);
 
   const admin = await prisma.adminUser.upsert({
     where: { email: 'admin@dmk-bs.de' },
