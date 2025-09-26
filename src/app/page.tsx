@@ -499,12 +499,20 @@ export default function HomePage() {
               </span>
             </button>
           </div>
+        ) : nextPrayer.status === 'full' || (nextPrayer.remaining !== undefined && nextPrayer.remaining === 0) ? (
+          <div className="text-center mx-4">
+            <div className="bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 rounded-2xl p-6 border border-red-200 shadow-lg mb-6">
+              <div className="text-5xl mb-3">🚫</div>
+              <div className="text-red-700 font-bold text-xl mb-2">Fully Booked</div>
+              <div className="text-red-600 text-sm">{t('prayer_fully_booked')}</div>
+            </div>
+          </div>
         ) : (
           <div className="space-y-6 mx-4">
             {/* People Counter */}
             <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-6 shadow-sm border border-gray-200">
               <div className="text-center">
-                
+
                 <div className="flex items-center justify-center space-x-4">
                   <button
                     onClick={() => setPeople(Math.max(1, people - 1))}
@@ -524,7 +532,7 @@ export default function HomePage() {
                     +
                   </button>
                 </div>
-               
+
               </div>
                <div className="text-gray-700 text-sm font-medium mb-4">{t('people')}</div>
             </div>

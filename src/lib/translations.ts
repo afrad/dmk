@@ -13,6 +13,7 @@ export const translations = {
     'cancel_registration': 'Cancel Registration',
     'prayer': 'Prayer',
     'no_upcoming_prayers': 'No upcoming prayers available for registration.',
+    'prayer_fully_booked': 'This prayer is fully booked. No more registrations are available.',
     'facebook': 'Facebook',
     'impressum': 'Legal Notice'
   },
@@ -30,6 +31,7 @@ export const translations = {
     'cancel_registration': 'Registrierung stornieren',
     'prayer': 'Gebet',
     'no_upcoming_prayers': 'Keine anstehenden Gebete zur Registrierung verfügbar.',
+    'prayer_fully_booked': 'Dieses Gebet ist vollständig ausgebucht. Es sind keine weiteren Anmeldungen möglich.',
     'facebook': 'Facebook',
     'impressum': 'Impressum'
   },
@@ -47,6 +49,7 @@ export const translations = {
     'cancel_registration': 'إلغاء التسجيل',
     'prayer': 'صلاة',
     'no_upcoming_prayers': 'لا توجد صلوات قادمة متاحة للتسجيل.',
+    'prayer_fully_booked': 'هذه الصلاة مكتملة التسجيل. لا توجد مقاعد متاحة.',
     'facebook': 'فيسبوك',
     'impressum': 'الإشعار القانوني'
   },
@@ -64,6 +67,7 @@ export const translations = {
     'cancel_registration': "Annuler l'inscription",
     'prayer': 'Prière',
     'no_upcoming_prayers': 'Aucune prière à venir disponible pour inscription.',
+    'prayer_fully_booked': 'Cette prière est complètement réservée. Aucune nouvelle inscription n\'est disponible.',
     'facebook': 'Facebook',
     'impressum': 'Mentions légales'
   }
